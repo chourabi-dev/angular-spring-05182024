@@ -1,0 +1,53 @@
+<h1>bonjour</h1>
+
+<p>
+  {{ 5 * 10 }}
+</p>
+<p>
+  pi : {{ pi }}
+</p>
+
+<p>
+  users: {{ users }}
+</p>
+
+<p>
+
+  {{ today }}
+</p>
+
+
+
+<h3>
+  Employees
+</h3>
+
+<div class="row">
+  
+  <div class="col-12 col-sm-4" *ngFor="let e of employees" >
+    <div class="card">
+      <div class="card-body">
+
+
+
+        <!--        <h4 *ngIf="e.address == null" class="no-address-employee" >{{e.fullname}}</h4>
+        <h4 *ngIf="e.address != null" class="address-employee" >{{e.fullname}}</h4>
+        
+-->
+        
+
+
+        <h4 class="employee-title"  [ngClass]=" e.address != null ? 'address-employee'  : 'no-address-employee'   "   >{{e.fullname}}</h4>
+        
+
+        <small>{{e.email}}</small><br>
+        <small>{{e.phone}}</small> <br>
+    
+        <small  *ngIf=" e.address != null "  > Location:  {{e.address}}</small>
+    
+      </div>
+    </div>
+  </div>
+
+</div>
+
