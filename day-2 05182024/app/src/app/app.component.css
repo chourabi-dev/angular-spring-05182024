@@ -1,0 +1,12 @@
+.address-employee{
+    color: green;
+}
+
+.no-address-employee{
+    color: orange;
+}
+
+
+.employee-title{
+    font-size: 40px;
+}

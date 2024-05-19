@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-sm-3">
+      <app-sidmenu></app-sidmenu>
+    </div>
+
+    <div class="col-sm-9">
+
+      <app-article  
+      *ngFor="let a of articles"  
+
+      [title]=" a.title "
+      [description]=" a.description "
+      [likes]=" a.likes "
+      
+
+      
+      
+      ></app-article>
+      
+
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>
+
+
+<!-- <p>
+  
+{{ 25000000000 | number  }}
+</p>
+
+
+<p>
+  
+{{ 25000000000 | currency:'TND'  }}
+</p>
+
+
+<p>
+  {{ today  |  date:'medium' }}
+</p> -->
+
+
+<p>
+  {{ email  | email }}
+</p>
+
+<p>
+  {{ email2 | email }}
+</p>
