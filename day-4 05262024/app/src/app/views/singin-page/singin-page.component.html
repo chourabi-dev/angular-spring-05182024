@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+
+                    <!--
+                        {{  }}
+                        <img  [src]  />
+                        <button (event_name) ></button>
+                     -->
+
+
+                     <p>
+                        {{ form.valid }}
+                     </p>
+                    <form (ngSubmit)="connect()" [formGroup]="form" >
+                        <div class="mb-3">
+                            <label for="">Username</label>
+                            <input type="text" class="form-control"   [ngClass]=" form.controls.username.valid == false ? 'is-invalid' : 'is-valid' "        formControlName="username" >
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Password</label>
+                            <input type="password" class="form-control" formControlName="password">
+                            <p *ngIf=" form.controls.password.valid == false " >
+                                <small class="text-danger">this feild is required</small>
+                            </p>
+
+                        </div>
+
+                        <div class="mb-3">
+                           <button type="submit" class="btn btn-primary" [disabled]=" ! form.valid " >Connect</button>
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

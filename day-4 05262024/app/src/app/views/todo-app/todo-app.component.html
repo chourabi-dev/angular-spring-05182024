@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="row ">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <!-- items -->
+                    <ul>
+                        <li *ngFor="let e of elements">
+                            <p>
+                                {{ e.content}}
+                            </p>
+                            <p>
+                                <small>{{ e.createdAt | date:'medium' }}</small>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                   <!--<form [formGroup]="form" (ngSubmit)="add()" >
+                        <input type="text" class="form-control" formControlName="todo">
+                        <button class="btn btn-success" type="submit" [disabled]="! form.valid">Add</button> 
+                   </form>-->
+
+                   <input type="text" class="form-control"  [(ngModel)]="myInput" >
+                   <button (click)="add2()" [disabled]="  myInput== '' " >add</button>
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
