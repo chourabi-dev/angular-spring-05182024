@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <h1>Employees list</h1>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ut commodi, repellat explicabo officiis facilis est ipsum consequuntur provident perferendis, suscipit odit! Quia illo ut dolor quis, laudantium repudiandae excepturi.
+    </p>
+    <p>
+        <a routerLink="/add-employee">Add new employee</a>
+    </p>
+
+
+
+
+    <div class="mt-5">
+        <table class="table">
+            <tr>
+                <th>fullname</th>
+                <th>phone</th>
+                <th>email</th>
+                <th>address</th>
+                
+            </tr>
+
+            <tr *ngFor="let e of employees">
+                <td>{{ e.fullname }}</td>
+                <td>{{ e.phone }}</td>
+                <td>{{ e.email }}</td>
+                <td>{{ e.address }}</td>
+                
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Add new employee</div>
+
+                <div class="card-body">
+                    <form   [formGroup]="form"  (ngSubmit)="add()"  >
+                        <div class="mb-3">
+                            <label for="">fullname</label>
+                            <input type="text" class="form-control" formControlName="fullname" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="">phone</label>
+                            <input type="text" class="form-control" formControlName="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">email</label>
+                            <input type="text" class="form-control" formControlName="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">address</label>
+                            <input type="text" class="form-control" formControlName="address">
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-primary"   [disabled]=" ! form.valid "    >Add new employee</button>
+                        </div>
+                        
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
