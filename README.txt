@@ -18,3 +18,9 @@ ng g c comp_name
 
 
 ng g p pipe_name
+
+
+
+
+// SPRING REPO METHODS
+https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html
