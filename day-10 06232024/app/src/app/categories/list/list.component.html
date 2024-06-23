@@ -1,0 +1,26 @@
+<div class="container mt-3">
+    <h3>Categories list</h3>
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Label</th>
+                <th scope="col">Products</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of categories">
+                <td>{{c.id}}</td>
+                <td>{{ c.title }}</td>
+                <td>
+                    <span class="badge bg-info text-white">{{ c.products.length }} product(s)</span>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
